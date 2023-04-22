@@ -2,8 +2,7 @@ import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'AstroWind',
-
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://tuht97.github.io',
   basePathname: '/',
   trailingSlash: false,
 
