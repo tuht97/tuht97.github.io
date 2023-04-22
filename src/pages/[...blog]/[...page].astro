@@ -1,19 +1,19 @@
 ---
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, PRODUCT } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
-import Pagination from '~/components/blog/Pagination.astro';
+// import Pagination from '~/components/blog/Pagination.astro';
 
 import { fetchPosts } from '~/utils/blog';
 import { BLOG_BASE } from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.list?.disabled) return [];
+  if (PRODUCT?.disabled || PRODUCT?.list?.disabled) return [];
   return paginate(await fetchPosts(), {
     params: { blog: BLOG_BASE || undefined },
-    pageSize: BLOG.postsPerPage,
+    // pageSize: PRODUCT.postsPerPage,
   });
 }
 
@@ -21,9 +21,9 @@ const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const meta = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: 'Products',
   description: SITE.description,
-  noindex: BLOG?.list?.noindex || currentPage > 1,
+  noindex: PRODUCT?.list?.noindex || currentPage > 1,
   ogType: 'blog',
 };
 ---

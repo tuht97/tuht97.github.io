@@ -11,10 +11,12 @@ const { posts } = Astro.props;
 
 <ul>
   {
-    posts.map((post) => (
-      <li class="mb-12 md:mb-20">
-        <Item post={post} />
-      </li>
-    ))
+    posts
+      .sort((a, b) => a.productId - b.productId)
+      .map((post) => (
+        <li class="mb-12 md:mb-20">
+          <Item post={post} />
+        </li>
+      ))
   }
 </ul>

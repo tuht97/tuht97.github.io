@@ -1,5 +1,5 @@
 ---
-import { BLOG } from '~/config.mjs';
+import { PRODUCT } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/blog/SinglePost.astro';
@@ -10,7 +10,7 @@ import { fetchPosts } from '~/utils/blog';
 import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
-  if (BLOG?.disabled || BLOG?.post?.disabled) return [];
+  if (PRODUCT?.disabled || PRODUCT?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
     params: {
       blog: post.permalink,
@@ -27,7 +27,7 @@ const meta = {
   description: post.description,
   canonical: post.canonical || url,
   image: await findImage(post.image),
-  noindex: BLOG?.post?.noindex,
+  noindex: PRODUCT?.post?.noindex,
   ogType: 'article',
 };
 ---

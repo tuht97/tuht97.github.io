@@ -1,5 +1,5 @@
 ---
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, PRODUCT } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
@@ -10,7 +10,7 @@ import { fetchPosts } from '~/utils/blog';
 import { CATEGORY_BASE } from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.category?.disabled) return [];
+  if (PRODUCT?.disabled || PRODUCT?.category?.disabled) return [];
 
   const posts = await fetchPosts();
   const categories = new Set();
@@ -23,7 +23,7 @@ export async function getStaticPaths({ paginate }) {
       posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
       {
         params: { category: category, blog: CATEGORY_BASE || undefined },
-        pageSize: BLOG.postsPerPage,
+        pageSize: PRODUCT.postsPerPage,
         props: { category },
       }
     )
@@ -36,7 +36,7 @@ const currentPage = page.currentPage ?? 1;
 const meta = {
   title: `Category'${category}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   description: SITE.description,
-  noindex: BLOG?.category?.noindex,
+  noindex: PRODUCT?.category?.noindex,
 };
 ---
 

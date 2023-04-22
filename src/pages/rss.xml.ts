@@ -1,11 +1,11 @@
 import rss from '@astrojs/rss';
 
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, PRODUCT } from '~/config.mjs';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 
 export const get = async () => {
-  if (BLOG.disabled) {
+  if (PRODUCT.disabled) {
     return new Response(null, {
       status: 404,
       statusText: 'Not found',
@@ -15,7 +15,7 @@ export const get = async () => {
   const posts = await fetchPosts();
 
   return rss({
-    title: `${SITE.name}’s Blog`,
+    title: `${SITE.name}’s Site`,
     description: SITE.description,
     site: import.meta.env.SITE,
 

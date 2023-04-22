@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, PRODUCT } from '~/config.mjs';
 import { trim } from '~/utils/utils';
 
 export const trimSlash = (s: string) => trim(trim(s, '/'));
@@ -20,11 +20,11 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-export const POST_PERMALINK_PATTERN = trimSlash(BLOG?.post?.permalink || '/%slug%');
+export const POST_PERMALINK_PATTERN = trimSlash(PRODUCT?.post?.permalink || '/%slug%');
 
-export const BLOG_BASE = cleanSlug(BLOG?.list?.pathname);
-export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname || 'category');
-export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname) || 'tag';
+export const BLOG_BASE = cleanSlug(PRODUCT?.list?.pathname);
+export const CATEGORY_BASE = cleanSlug(PRODUCT?.category?.pathname || 'category');
+export const TAG_BASE = cleanSlug(PRODUCT?.tag?.pathname) || 'tag';
 
 /** */
 export const getCanonical = (path = ''): string | URL => {

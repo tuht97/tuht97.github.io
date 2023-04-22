@@ -1,14 +1,14 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Việt Lôi',
   origin: 'https://tuht97.github.io',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'Việt Lôi — CÔNG TY TNHH MTV TM & KT VIỆT LÔI',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    '⚡ Công ty chuyên nghiệp uy tín trong lĩnh vực tư vấn cung cấp giải pháp chống sét trực tiếp chống sét lan truyền và hệ thống tiếp địa an toàn',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -26,7 +26,7 @@ const CONFIG = {
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
-  blog: {
+  product: {
     disabled: false,
     postsPerPage: 4,
 
@@ -57,5 +57,5 @@ const CONFIG = {
 };
 
 export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
+export const PRODUCT = CONFIG.product;
 export const DATE_FORMATTER = CONFIG.dateFormatter;
