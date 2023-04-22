@@ -1,67 +1,16 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
-  links: [
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
-        },
-      ],
-    },
-    {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: '#',
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'About us',
-          href: '#',
-        },
-        {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
-  ],
+  links: [],
   actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
+    {
+      type: 'button',
+      text: 'Download',
+      href: 'https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view?fbclid=IwAR2Vg-NJlzbmuU_2sXcJrcvJ_5yNO1R8tYgTPUeHkwbEt_ykkTN1EepXaCI',
+    },
   ],
 };
-  
+
 export const footerData = {
   links: [
     {

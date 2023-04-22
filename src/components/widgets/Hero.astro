@@ -1,7 +1,9 @@
 ---
 import { Icon } from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
-
+import LivaGrup from '~/assets/images/LivaGrup.jpg';
+import LivaGrup2 from '~/assets/images/LivaGrup2.jpg';
+import { Image } from '@astrojs/image/components';
+import Certificate from '~/assets/images/certificate.jpg';
 interface CallToAction {
   text: string;
   href: string;
@@ -14,6 +16,7 @@ export interface Props {
   callToAction?: string | CallToAction;
   callToAction2?: string | CallToAction;
   image?: string | any; // TODO: find HTMLElementProps
+  images?: string | any;
 }
 
 const {
@@ -22,7 +25,6 @@ const {
   content = await Astro.slots.render('content'),
   callToAction = await Astro.slots.render('callToAction'),
   callToAction2 = await Astro.slots.render('callToAction2'),
-  image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
 
@@ -83,7 +85,7 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div>
+      <!-- <div>
         {
           image && (
             <div class="relative m-auto max-w-5xl">
@@ -104,6 +106,77 @@ const {
             </div>
           )
         }
+      </div> -->
+      <div class="flex-1 justify-center flex">
+        <div
+          id="default-carousel"
+          class="relative w-3/4 overflow-hidden lg:overflow-visible lg:w-full"
+          data-carousel="slide"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 rounded-lg md:h-96 overflow-hidden md:overflow-visible">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <Image
+                src={LivaGrup}
+                class="absolute rounded-md -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+                width={1024}
+                height={576}
+                sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                aspectRatio={1024 / 576}
+                widths={[400, 768, 1024, 2040]}
+              />
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <Image
+                src={Certificate}
+                class="absolute rounded-md -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+                width={1024}
+                height={576}
+                sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                aspectRatio={1024 / 576}
+                widths={[400, 768, 1024, 2040]}
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <Image
+                src={LivaGrup2}
+                class="absolute rounded-md -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+                width={1024}
+                height={576}
+                sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                aspectRatio={1024 / 576}
+                widths={[400, 768, 1024, 2040]}
+              />
+            </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
