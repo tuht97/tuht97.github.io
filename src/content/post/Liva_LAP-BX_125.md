@@ -5,7 +5,7 @@ title: Liva_LAP-BX_125
 description: Lorem ipsum dolor sit amet
 excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
 image: ~/assets/images/Liva_LAP-BX_125.jpg
-# category: Tutorials
+category: Kim chống sét
 tags:
   - kim chống sét
 ---
