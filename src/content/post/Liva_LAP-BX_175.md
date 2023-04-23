@@ -6,7 +6,7 @@ description: Kim Thu Sét Liva_LAP-BX_175T
 excerpt: Thời gian phát tia tiên đạo 63µSec - Theo tiêu chuẩn Pháp NFC 17-102
 radius: Bán kính bảo vệ cấp 4 là 110m
 image: ~/assets/images/Liva_LAP-BX_175.png
-category: Kim chống sét
+category: Kim thu sét
 tags:
-  - kim chống sét
+  - kim thu sét
 ---
