@@ -59,6 +59,7 @@ const link = !PRODUCT?.post?.disabled ? getPermalink(post.permalink, 'post') : '
     </header>
 
     {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
+    {post.radius && <p class="flex-grow text-muted dark:text-slate-400 text-lg mt-2">{post.radius}</p>}
     <footer class="mt-5">
       <PostTags tags={post.tags} />
     </footer>

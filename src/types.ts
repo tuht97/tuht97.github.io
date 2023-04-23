@@ -16,6 +16,7 @@ export interface Post {
   content?: string;
   readingTime?: number;
   productId:number;
+  radius?: string;
 }
 
 export interface MetaSEO {
