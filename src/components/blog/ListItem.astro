@@ -24,15 +24,7 @@ const link = !PRODUCT?.post?.disabled ? getPermalink(post.permalink, 'post') : '
   {
     image && (
       <div class="relative bg-white dark:bg-slate-700 rounded shadow-lg flex justify-center p-5">
-        {image && (
-          <Image
-            src={image}
-            class="inset-0 w-auto h-full bg-gray-400 dark:bg-slate-700"
-            alt={post.title}
-            loading="lazy"
-            decoding="async"
-          />
-        )}
+        {image && <Image src={image} class="inset-0 w-auto h-full" alt={post.title} loading="lazy" decoding="async" />}
       </div>
     )
   }
