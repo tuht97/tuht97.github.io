@@ -13,7 +13,8 @@ const post = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
     productId:z.number(),
-    radius: z.string().optional()
+    radius: z.string().optional(),
+    rawCategory: z.string().optional()
   }),
 });
 

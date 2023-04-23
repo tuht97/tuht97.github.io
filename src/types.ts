@@ -17,6 +17,7 @@ export interface Post {
   readingTime?: number;
   productId:number;
   radius?: string;
+  rawCategory?:string;
 }
 
 export interface MetaSEO {

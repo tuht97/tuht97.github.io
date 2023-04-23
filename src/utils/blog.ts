@@ -48,7 +48,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   return {
     id: id,
     slug: slug,
-
+    rawCategory: rawCategory,
     publishDate: publishDate,
     category: category,
     tags: tags,
