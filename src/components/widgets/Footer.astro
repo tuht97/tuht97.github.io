@@ -2,8 +2,6 @@
 import { Icon } from 'astro-icon';
 import { Image } from '@astrojs/image/components';
 import BCT from '~/assets/images/bct.png';
-import { SITE } from '~/config.mjs';
-import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -12,10 +10,10 @@ interface Link {
   icon?: string;
 }
 
-interface Links {
-  title?: string;
-  links: Array<Link>;
-}
+// interface Links {
+//   title?: string;
+//   links: Array<Link>;
+// }
 
 export interface Props {
   // links: Array<Links>;
@@ -36,9 +34,6 @@ const { socialLinks = [], footNote = '', theme = 'light' } = Astro.props;
         <Fragment set:html={footNote} />
       </div>
       <div class="flex flex-col">
-        <a href="http://online.gov.vn/Home/WebDetails/33667">
-          <Image src={BCT} alt="BCT" />
-        </a>
         {
           socialLinks?.length ? (
             <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
@@ -59,6 +54,9 @@ const { socialLinks = [], footNote = '', theme = 'light' } = Astro.props;
             ''
           )
         }
+        <a href="http://online.gov.vn/Home/WebDetails/33667">
+          <Image src={BCT} alt="BCT" />
+        </a>
       </div>
     </div>
   </div>
