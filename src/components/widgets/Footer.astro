@@ -2,7 +2,8 @@
 import { Icon } from 'astro-icon';
 import { Image } from '@astrojs/image/components';
 import BCT from '~/assets/images/bct.png';
-
+// import { SITE } from '~/config.mjs';
+// import { getHomePermalink } from '~/utils/permalinks';
 interface Link {
   text?: string;
   href?: string;
@@ -26,7 +27,12 @@ export interface Props {
 const { socialLinks = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800']}>
+<footer
+  class:list={[
+    { dark: theme === 'dark' },
+    'relative border-t border-gray-200 dark:border-slate-800 bg-blue-50 dark:bg-blue-600',
+  ]}
+>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
