@@ -1,7 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
-
+import { YouTube } from '@astro-community/astro-embed-youtube';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 
@@ -38,16 +38,7 @@ const meta = {
 
   <Content title="Dây Chuyền Sản Xuất" subBg={true}>
     <Fragment slot="image">
-      <iframe
-        width={900}
-        height={900}
-        class="h-96"
-        src="https://www.youtube.com/embed/TZCOmZjDm4g"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="width:100%"></iframe>
+      <YouTube id="TZCOmZjDm4g" />
     </Fragment>
   </Content>
 

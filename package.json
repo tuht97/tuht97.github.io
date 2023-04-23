@@ -45,6 +45,7 @@
     "node": ">=16.12.0"
   },
   "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.2.2",
     "flowbite": "^1.6.5"
   }
 }
