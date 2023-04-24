@@ -2,7 +2,7 @@ import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'Việt Lôi',
-  origin: 'https://tuht97.github.io',
+  origin: 'https://vietloi.com.vn',
   basePathname: '/',
   trailingSlash: false,
 
