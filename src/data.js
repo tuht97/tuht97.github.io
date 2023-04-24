@@ -28,13 +28,19 @@ export const footerData = {
       icon: 'tabler:brand-facebook',
       href: 'https://www.facebook.com/Ch%E1%BB%91ng-S%C3%A9t-Vi%E1%BB%87t-L%C3%B4i-1957864830954100/',
     },
+    {
+      ariaLabel: 'Zalo',
+      icon: 'simple-icons:zalo',
+      href: 'https://zalo.me/0907475572',
+    },
+
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
   <div>
   <div class="font-bold text-lg">CÔNG TY TNHH MTV TM & KT VIỆT LÔI</div>
   <div>SĐT: 090 747 572</div>
-  <div>EMAIL: sonvietloi@gmail.com</div>
+  <div>EMAIL: <a href="mailto:sonvietloi@gmail.com">sonvietloi@gmail.com</a></div>
   </div>
   <div>Made by ⚡ <span class="highlight font-semibold">VietLoi</span> · All rights reserved.</div>
 `,
