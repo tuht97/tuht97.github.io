@@ -39,7 +39,7 @@ export const footerData = {
   footNote: `
   <div>
   <div class="font-bold text-lg">CÔNG TY TNHH MTV TM & KT VIỆT LÔI</div>
-  <div>SĐT: 090 747 572</div>
+  <div>SĐT: 090 747 5572</div>
   <div>EMAIL: <a href="mailto:sonvietloi@gmail.com">sonvietloi@gmail.com</a></div>
   </div>
   <div>Made by ⚡ <span class="highlight font-semibold">VietLoi</span> · All rights reserved.</div>
