@@ -1,0 +1,233 @@
+{{ define "main" }}
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Việt Lôi" />
+    </a>
+    <nav>
+      <a href="/products">Sản Phẩm</a>
+      <a href="/categories/kim-thu-set">Kim Thu Sét</a>
+    </nav>
+    <div class="header-actions">
+      <a
+        href="https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view"
+        class="btn btn-secondary"
+        target="_blank"
+        >Catalogue Kim Chống Sét</a
+      >
+      <a
+        href="https://drive.google.com/file/d/16rYWwZNG4WemXpbhADNOGb7UzDHeaoog/view"
+        class="btn btn-primary"
+        target="_blank"
+        >Catalogue Chống Sét Lan Truyền</a
+      >
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      Chuyên Gia Chống Sét Hàng Đầu
+    </div>
+    <h1 class="hero-title">CÔNG TY TNHH MTV TM & KT VIỆT LÔI</h1>
+    <p class="hero-subtitle">
+      Chúng tôi là công ty chuyên nghiệp uy tín trong lĩnh vực tư vấn cung cấp giải pháp chống sét trực tiếp, chống sét
+      lan truyền và hệ thống tiếp địa an toàn. Mục tiêu của chúng tôi là đem đến cho khách hàng những giải pháp tối ưu
+      nhất.
+    </p>
+    <div class="hero-buttons">
+      <a
+        href="https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view"
+        class="btn btn-primary"
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Catalogue Kim Chống Sét
+      </a>
+      <a
+        href="https://drive.google.com/file/d/16rYWwZNG4WemXpbhADNOGb7UzDHeaoog/view"
+        class="btn btn-secondary"
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Catalogue Chống Sét Lan Truyền
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Năm Kinh Nghiệm</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Dự Án Hoàn Thành</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Khách Hàng Hài Lòng</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section products-section">
+  <div class="section-header">
+    <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+    <p class="section-subtitle">Danh mục sản phẩm kim thu sét chất lượng cao, được thiết kế theo tiêu chuẩn quốc tế</p>
+  </div>
+  <div class="products-grid">
+    {{ range first 6 (where .Site.RegularPages "Section" "products") }}
+    <a href="{{ .Permalink }}" class="product-card">
+      <div class="product-image">
+        <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
+      </div>
+      <div class="product-content">
+        <h3 class="product-title">{{ .Title }}</h3>
+        <p class="product-description">{{ .Description }}</p>
+        <div class="product-meta">
+          {{ with .Params.radius }}
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            {{ . }}
+          </span>
+          {{ end }} {{ with .Params.excerpt }}
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            {{ . }}
+          </span>
+          {{ end }}
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <img src="/images/logo.png" alt="Việt Lôi" />
+      </a>
+      <p class="footer-description">
+        Công ty chuyên nghiệp uy tín trong lĩnh vực tư vấn cung cấp giải pháp chống sét trực tiếp chống sét lan truyền
+        và hệ thống tiếp địa an toàn.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/Ch%E1%BB%91ng-S%C3%A9t-Vi%E1%BB%87t-L%C3%B4i-1957864830954100/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://zalo.me/0907475572" target="_blank" aria-label="Zalo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-title">Sản Phẩm</h4>
+      <div class="footer-links">
+        <a href="/categories/kim-thu-set">Kim Thu Sét</a>
+        <a href="/products">Tất cả sản phẩm</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-title">Liên Hệ</h4>
+      <div class="footer-links">
+        <a href="tel:0907475572">Điện thoại: 090 747 5572</a>
+        <a href="mailto:sonvietloi@gmail.com">Email: sonvietloi@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 CÔNG TY TNHH MTV TM & KT VIỆT LÔI. All rights reserved.</p>
+  </div>
+</footer>
+{{ end }}

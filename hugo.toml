@@ -1,0 +1,20 @@
+baseURL = 'https://tuht97.github.io/'
+languageCode = 'vi'
+title = 'Việt Lôi — CÔNG TY TNHH MTV TM & KT VIỆT LÔI'
+theme = 'vietloi'
+
+defaultContentLanguage = 'vi'
+hasCJKLanguage = true
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[params]
+  description = 'Công ty chuyên nghiệp uy tín trong lĩnh vực tư vấn cung cấp giải pháp chống sét trực tiếp chống sét lan truyền và hệ thống tiếp địa an toàn'
+  author = 'Việt Lôi'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
