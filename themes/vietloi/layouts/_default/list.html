@@ -32,7 +32,7 @@
 <section class="section products-section">
   <div class="products-grid">
     {{ range .Pages }}
-    <a href="{{ .Permalink }}" class="product-card">
+    <div class="product-card">
       <div class="product-image">
         <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
       </div>
@@ -42,36 +42,19 @@
         <div class="product-meta">
           {{ with .Params.radius }}
           <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
             {{ . }}
           </span>
-          {{ end }} {{ with .Params.excerpt }}
+          {{ end }}
+          {{ with .Params.excerpt }}
           <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             {{ . }}
           </span>
           {{ end }}
         </div>
       </div>
-    </a>
+    </div>
     {{ end }}
   </div>
 </section>

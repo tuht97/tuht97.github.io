@@ -120,7 +120,7 @@
   </div>
   <div class="products-grid">
     {{ range first 6 (where .Site.RegularPages "Section" "products") }}
-    <a href="{{ .Permalink }}" class="product-card">
+    <div class="product-card">
       <div class="product-image">
         <img src="/images/{{ .Params.image }}" alt="{{ .Title }}" />
       </div>
@@ -159,7 +159,7 @@
           {{ end }}
         </div>
       </div>
-    </a>
+    </div>
     {{ end }}
   </div>
 </section>
