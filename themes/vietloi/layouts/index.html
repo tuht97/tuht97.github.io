@@ -4,23 +4,30 @@
     <a href="/" class="logo">
       <img src="/images/logo.png" alt="Việt Lôi" />
     </a>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="header-actions">
       <a href="/products" class="btn btn-secondary">Sản Phẩm</a>
-      <a
-        href="https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view"
-        class="btn btn-secondary"
-        target="_blank"
-        >Catalogue Kim Thu Sét</a
-      >
-      <a
-        href="https://drive.google.com/file/d/16rYWwZNG4WemXpbhADNOGb7UzDHeaoog/view"
-        class="btn btn-primary"
-        target="_blank"
-        >Catalogue Chống Sét Lan Truyền</a
-      >
+      <a href="https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view" class="btn btn-secondary" target="_blank">Catalogue Kim Thu Sét</a>
+      <a href="https://drive.google.com/file/d/16rYWwZNG4WemXpbhADNOGb7UzDHeaoog/view" class="btn btn-primary" target="_blank">Catalogue Chống Sét Lan Truyền</a>
     </div>
   </div>
+  <div class="mobile-menu" id="mobileMenu" style="display: none;">
+    <a href="/products" class="btn btn-secondary">Sản Phẩm</a>
+    <a href="https://drive.google.com/file/d/1CkTyr9oxA2nlrXCB15Ox-f2fqn2I26s5/view" class="btn btn-secondary" target="_blank">Catalogue Kim Thu Sét</a>
+    <a href="https://drive.google.com/file/d/16rYWwZNG4WemXpbhADNOGb7UzDHeaoog/view" class="btn btn-primary" target="_blank">Catalogue Chống Sét Lan Truyền</a>
+  </div>
 </header>
+
+<script>
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobileMenu');
+  menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+}
+</script>
 
 <section class="hero">
   <div class="hero-content">
